@@ -19,11 +19,13 @@ from django.urls import path
 from MD.view import msg01
 from MD.view import hoy
 from MD.view import param01
+from MD.view import Template01
 
 
 urlpatterns = [
 #    path('admin/', admin.site.urls),
     path('MD01/', msg01),
     path('MD02/', hoy),
-    path('MD03/<nombre>', param01)
+    path('MD03/<parametro01>', param01),
+    path('MD04/', Template01),
 ]
