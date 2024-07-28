@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-  plantilla01  
-  <p style="color:blue">Categoria: {{c}} </p>
+<body style="background-color:LightBlue;">
+    <font color="Black" face="arial" size=4&gt>
+    Plantilla01
+    
+    <p style="color:blue">Categoria: {{c}} </p>
   <p style="color:green">Tipo: {{t}} </p>
 
-  <h1> creado el: {{hoy}} </h1>
+  <h1> creado el: {{h}} </h1>
   <h3> precios: </h3>
 
   <p>
@@ -20,5 +22,6 @@
       {% else %} <p style="color:blue">Normal: {{n}} </p>
       {% endif %} 
   {% endfor %}
+</font>
 </body>
 </html>

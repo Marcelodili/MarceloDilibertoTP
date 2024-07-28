@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "App01",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'MD.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["D:\_DOCUMENTOS\CODERHOUSE\Phyton\Entrega3\TerceraPreEntregaDiliberto\MD\MD\PLANTILLAS"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
