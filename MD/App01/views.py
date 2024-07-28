@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.urls import path, include
+from django.http import HttpResponse
+from django.db import models
+from .models import Destino
+
 
 
 # Create your views here.
@@ -24,5 +28,6 @@ def ingrese(request):
 
 
 def ofertas(request):
-
-    return render(request, "App01/ofertas.html")
+    ofertas = Destino.objects.all() 
+    contexto = {"ofertas": ofertas} 
+    return render(request, "App01/ofertas.html", contexto)
