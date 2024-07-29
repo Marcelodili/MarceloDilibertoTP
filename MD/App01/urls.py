@@ -1,6 +1,6 @@
 from django.urls import path
 from App01 import views
-from App01.views import inicio
+from .views import inicio
 from App01.views import busqueda
 from App01.views import estado
 from App01.views import ingrese
@@ -18,15 +18,15 @@ urlpatterns = [
     path('MD02/', hoy),
     path('MD03/<parametro01>', param01),
     path('MD04/', Template01),
-    path("", inicio),
-    path("busqueda", busqueda),
-    path("estado", estado),
-    path("ingrese", ingrese),
-    path("ofertas", ofertas),
-#    path('', views.inicio, name="Inicio"),
-#    path('busqueda', views.busqueda, name="Busqueda"), 
-#    path('estado', views.estado, name="Estado"), 
-#    path('ingrese', views.ingrese, name="Ingrese"), 
-#    path('ofertas', views.ofertas, name="Ofertas"), 
+#    path("", inicio),
+#    path("busqueda", busqueda),
+#    path("estado", estado),
+#    path("ingrese", ingrese),
+#    path("ofertas", ofertas),
+    path('', views.inicio, name="Inicio"),
+    path('busqueda/', views.busqueda, name="Busqueda"), 
+    path('estado/', views.estado, name="Estado"), 
+    path('ingrese/', views.ingrese, name="Ingrese"), 
+    path('ofertas/', views.ofertas, name="Ofertas"), 
 ]
 

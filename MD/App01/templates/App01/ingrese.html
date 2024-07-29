@@ -4,7 +4,26 @@
 {% load static %}
 {% block Cambia %}
 INGRESO SOLICITUD PRESUPUESTO <br /> <br /> <br />
-{% endblock %}
-   
+    {% block title %} Ingreso Presupuesto {% endblock title %}
 
+    {% block main %}
+        <form action="/ingrese/" method="POST">
+            {% csrf_token %}
+            <p> DNI <input type = "number" name="clientedni"> </p>
+            <p> CodigoTransporte <input type = "number" name="codigotransporte"> </p> 
+            <p> CodigoDestino <input type = "number" name="codigodestino"> </p>
+            <p> Comentario <input type = "text" name="comentario"> </p>
+            <p> FechaViaje <input type = "date" name="fechaviaje"> </p>
+            <p> Dias <input type = "number" name="dias"> </p>
+            <p> Pasajeros <input type = "number" name="pasajeros"> </p>
+            
+            <table>
+                {{ mi_formulario.as_table }}
+            </table>
+            <input type="submit" value="Enviar">
+
+        </form>
+    {% endblock main %}
+
+{% endblock %} 
 </html>
