@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+{% extends "App01/_base.html" %}
+{% load static %}
+{% block Cambia %}
+ESTADO DE PRESUPUESTO INGRESADO <br /> 
+<form action="/buscar/" method="GET">
+    {% csrf_token %}
+    <input type="number" name="clientedni" id="clientedni">
+    <input type="submit" value="Buscar">
+</form>
+{% endblock %}
+</html>

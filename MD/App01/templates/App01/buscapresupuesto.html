@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% extends "App01/_base.html" %}
+{% load static %}
+{% block Cambia %}
+ESTADO DE PRESUPUESTO INGRESADO <br /> 
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ mi_formulario.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}
+</html>

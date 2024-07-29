@@ -9,3 +9,15 @@ class IngresarFormulario(forms.Form):
     fechaviaje = forms.DateField()
     dias = forms.IntegerField()
     pasajeros = forms.IntegerField()
+
+
+class IngresarFormularioCliente(forms.Form):
+    dni = forms.IntegerField()
+    nombre = forms.CharField(max_length=30)
+    apellido = forms.CharField(max_length=30)
+    email = forms.EmailField()
+    fechanacimiento = forms.DateField()
+ 
+
+class BuscaPresuForm(forms.Form):
+    clientedni = forms.IntegerField()

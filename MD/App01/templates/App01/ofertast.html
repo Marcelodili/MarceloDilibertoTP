@@ -3,8 +3,13 @@
 {% extends "App01/_base.html" %}
 {% load static %}
 {% block Cambia %}
-ESTADO DE PRESUPUESTO INGRESADO <br /> <br /> <br />
+
+OFERTAS transportes <br /> <br /> <br />
+{% for p in ofertast %}
+<li>{{p}}</li>
+{% endfor %}
+
 {% endblock %}
-   
+ 
 
 </html>

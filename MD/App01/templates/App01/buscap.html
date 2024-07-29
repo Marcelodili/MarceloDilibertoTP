@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+{% extends "App01/_base.html" %}
+{% load static %}
+{% block Cambia %}
+
+Resultado busqueda.  <br />
+{% for p in ingrese %}
+<li>p: {{p}}</li>
+<li>PresupuestoDNI: {{p.clientedni}}</li>
+{% endfor %}
+{% endblock Cambia %}
+</html>
