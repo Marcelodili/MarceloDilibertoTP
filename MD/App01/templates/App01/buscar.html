@@ -3,12 +3,11 @@
 {% extends "App01/_base.html" %}
 {% load static %}
 {% block Cambia %}
-Resultado busqueda.  <br />
-<p> {{clientedni}}</p>
-{% if clientedni %}
+Resultado busqueda:  <br />
+{% if Presupuestado %}
 <ul>
-    {% for p in clientedni %}   
-    <li>{{p.clientedni}}</li> 
+    {% for p in Presupuestado %}   
+    <li>{{p.Presupuestado}}</li> 
 {% endfor %}
 </ul>
 {% endif %}
