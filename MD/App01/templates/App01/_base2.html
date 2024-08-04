@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-   <head>
-        {% load static %}
+    <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -19,7 +17,7 @@
 <!--        <link href="css/styles.css" rel="stylesheet" />-->
         <link href="{% static 'App01/css/styles.css' %}" rel="stylesheet" />
     </head>
-    <body id="page-top" style="background-color:LightBlue;">
+    <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -28,20 +26,18 @@
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class=id="collapse navbar-collapse" id="navbarResponsive">
-<!--                <div class="collapse navbar-collapse">-->
+                <div class="collapse navbar-collapse">
 <!--                <div class="collapse navbar-collapse" id="navbarResponsive">-->
 
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Para vos</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Nosotros</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacto</a></li>
-                <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
-                <a class="navbar-brand" href="{% url 'Ofertas' %}">Ofertas</a>
-                <a class="navbar-brand" href="{% url 'OfertasTransporte' %}">Transporte</a>
-                <a class="navbar-brand" href="{% url 'IngreseCliente' %}">Clientes</a>             
-                <a class="navbar-brand" href="{% url 'Ingrese' %}">Presupuesto</a>
-                <a class="navbar-brand" href="{% url 'BuscaPresupuesto' %}">Estado</a>
+                <a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'ofertas' %}">Ofertas</a>
+                <a class="navbar-brand" href="{% url 'busqueda' %}">Busqueda</a>
+                <a class="navbar-brand" href="{% url 'ingrese' %}">Presupuesto</a>
+                <a class="navbar-brand" href="{% url 'estado' %}">Estado</a>
                     <a class="btn btn-me btn-outline-light" href="https://www.com/r/">
                         <i class="fas fa-download me-2"></i>
                         link!
@@ -54,11 +50,23 @@
 
         </nav>
         <!-- Masthead DINAMICO***-->
-<br /> 
-<br />
-    {% block Cambia %}
-    {% endblock %} 
 
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Busca tu viaje</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">¡Ofertas!</p>
+            </div>
+        </header>
         <!-- Masthead DINAMICO FIN*** -->
 
         <!-- Portfolio Section-->
@@ -80,7 +88,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/static/App01/assets/img/portfolio/cabin.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -89,7 +97,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/static/App01/assets/img/portfolio/cake.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -98,7 +106,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/static/App01/assets/img/portfolio/circus.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -107,7 +115,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/static/App01/assets/img/portfolio/game.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 5-->
@@ -116,7 +124,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/static/App01/assets/img/portfolio/safe.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 6-->
@@ -125,7 +133,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/static/App01/assets/img/portfolio/submarine.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -283,7 +291,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/static/App01/assets/img/portfolio/cabin.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">OfErTaS.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -315,7 +323,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/static/App01/assets/img/portfolio/cake.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">ClIeNtEs.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -347,7 +355,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/static/App01/assets/img/portfolio/circus.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">:).</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -379,7 +387,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/static/App01/assets/img/portfolio/game.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">:).:).:)</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -411,7 +419,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/static/App01/assets/img/portfolio/safe.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">:).:).:).:)..</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -443,7 +451,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/static/App01/assets/img/portfolio/submarine.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">:).:).:).:).:)..</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">

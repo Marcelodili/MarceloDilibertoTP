@@ -3,11 +3,20 @@
 {% extends "App01/_base.html" %}
 {% load static %}
 {% block Cambia %}
+<body>
+    <font color="Black" face="arial" size=4&gt>
+<br /> 
+<br /> 
+<br />  
+<br /> 
+
 
 Resultado busqueda.  <br />
 {% for p in Presupuestos %}
 <li>p: {{p}}</li>
 <!--<li>PresupuestoDNI: {{p.clientedni}}</li>-->
 {% endfor %}
+</font>   
+</body>
 {% endblock Cambia %}
 </html>

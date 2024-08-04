@@ -19,7 +19,7 @@
 <!--        <link href="css/styles.css" rel="stylesheet" />-->
         <link href="{% static 'App01/css/styles.css' %}" rel="stylesheet" />
     </head>
-    <body id="page-top" style="background-color:LightBlue;">
+    <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -28,8 +28,7 @@
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class=id="collapse navbar-collapse" id="navbarResponsive">
-<!--                <div class="collapse navbar-collapse">-->
+                <div class="collapse navbar-collapse">
 <!--                <div class="collapse navbar-collapse" id="navbarResponsive">-->
 
                     <ul class="navbar-nav ms-auto">
@@ -38,10 +37,10 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacto</a></li>
                 <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
                 <a class="navbar-brand" href="{% url 'Ofertas' %}">Ofertas</a>
-                <a class="navbar-brand" href="{% url 'OfertasTransporte' %}">Transporte</a>
-                <a class="navbar-brand" href="{% url 'IngreseCliente' %}">Clientes</a>             
+                <a class="navbar-brand" href="{% url 'OfertasTransporte' %}">Ofertas Transporte</a>
+                <a class="navbar-brand" href="{% url 'IngreseCliente' %}">Ingrese Cliente</a>             
                 <a class="navbar-brand" href="{% url 'Ingrese' %}">Presupuesto</a>
-                <a class="navbar-brand" href="{% url 'BuscaPresupuesto' %}">Estado</a>
+                <a class="navbar-brand" href="{% url 'BuscaPresupuesto' %}">Estado Presupuesto</a>
                     <a class="btn btn-me btn-outline-light" href="https://www.com/r/">
                         <i class="fas fa-download me-2"></i>
                         link!
@@ -54,8 +53,6 @@
 
         </nav>
         <!-- Masthead DINAMICO***-->
-<br /> 
-<br />
     {% block Cambia %}
     {% endblock %} 
 

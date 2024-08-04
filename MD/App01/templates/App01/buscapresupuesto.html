@@ -3,6 +3,13 @@
 {% extends "App01/_base.html" %}
 {% load static %}
 {% block Cambia %}
+<body>
+    <font color="Black" face="arial" size=4&gt>
+<br /> 
+<br /> 
+<br />  
+<br /> 
+
 ESTADO DE PRESUPUESTO INGRESADO <br /> 
 <form action="" method="POST">
     {% csrf_token %}
@@ -11,5 +18,7 @@ ESTADO DE PRESUPUESTO INGRESADO <br />
     </table>
     <input type="submit" value="Enviar">
 </form>
+</font>   
+</body>
 {% endblock %}
 </html>
