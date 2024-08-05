@@ -13,6 +13,10 @@ pagina de inicio
 http://127.0.0.1:8000/ofertas
 Muestra el contenido de la tabla Destino
 
+http://127.0.0.1:8000/vbc/ofertas/listar
+Muestra el contenido de la tabla Destino
+con vista basada en clase
+
 http://127.0.0.1:8000/ofertast
 Muestra el contenido de la tabla Transporte
 

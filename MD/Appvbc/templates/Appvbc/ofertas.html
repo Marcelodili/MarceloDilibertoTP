@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+# http://127.0.0.1:8000/vbc/ofertas/listar
+{% extends "App01/_base.html" %}
+{% load static %}
+{% block Cambia %}
+<body>
+    <font color="Black" face="arial" size=4&gt>
+<br /> 
+<br /> 
+<br />  
+<br /> 
+
+OFERTAS: <br />  <br /> <br />
+{% for p in ofertas %}
+<p>° Codigo: {{p.codigo}} | Destino: {{p.nombre}} | Hotel: {{p.hotel}} | Precio: {{p.precio}}</p>
+<!---- <li>{{p}}</li> -->
+{% endfor %}
+</font>   
+</body>
+
+{% endblock %}
+ 
+
+</html>

@@ -61,7 +61,6 @@ def ingresecliente(request):
         mi_formulario = IngresarFormularioCliente()
     return render(request, "App01/ingresecliente.html", {"mi_formulario": mi_formulario})
 
-
 def ingrese_input(request):
     if request.method == "POST":
         ingrese = Presupuestar(clientedni=request.POST["clientedni"], codigotransporte=request.POST["codigotransporte"], codigodestino=request.POST["codigodestino"], comentario=request.POST["comentario"], fechaviaje=request.POST["fechaviaje"], dias=request.POST["dias"], pasajeros=request.POST["pasajeros"])
@@ -75,7 +74,6 @@ def ingrese_input(request):
 def buscapresupuestoG(request):
     return render(request, "App01/buscapresupuestoG.html")
 
-
 def buscar(request):
     if request.GET["clientedni"]:
 
@@ -85,7 +83,6 @@ def buscar(request):
     else:
         respuesta = "sin datos"
     HttpResponse(respuesta)
-
 
 def buscapresupuesto(request):
     if request.method == "POST":
